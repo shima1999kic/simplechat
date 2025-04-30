@@ -37,6 +37,7 @@ def lambda_handler(event, context):
         req = urllib.request.Request(FASTAPI_URL, data=data, headers=headers, method="POST")
         with urllib.request.urlopen(req) as res:
             result = json.loads(res.read().decode("utf-8"))
+            print("Response from FastAPI:", result)
 
         assistant_response = result.get("response", "")
         updated_history = result.get("conversationHistory", conversation_history + [
