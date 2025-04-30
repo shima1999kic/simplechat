@@ -5,7 +5,7 @@ import re
 import urllib.request
 
 # FastAPI の推論エンドポイント（Colabで公開されたURLに変更）
-FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://3f9d-34-169-213-164.ngrok-free.app/")
+FASTAPI_URL = os.environ.get("FASTAPI_URL", "https://3f9d-34-169-213-164.ngrok-free.app/generate")
 
 def lambda_handler(event, context):
     try:
